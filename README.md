@@ -19,8 +19,8 @@ docker build -t demo/python-xxx-demo:v2019-07-31 .
 docker run -p 5000:5000 demo/python-xxx-demo:v2019-07-31
 
 // 自定义执行文件
-docker run -it --rm -v `pwd`:/app demo/python-base-demo python3 /app/main.py --start_time 1000
+docker run -it --rm -v `pwd`:/app demo/python-base-demo:v2019-07-31 python3 /app/main.py --start_time 1000
 
 // bash 进入容器内部
-docker run --rm -it test/python-xxx-demo:v2019-07-31 /bin/bash
+docker run --rm -it demo/python-xxx-demo:v2019-07-31 /bin/bash
 ```
